@@ -1,0 +1,30 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="1126" measuredH="529" mockupW="1044" mockupH="490">
+  <controls>
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::Canvas" x="82" y="39" w="1044" h="490" measuredW="100" measuredH="70" zOrder="0" locked="false" isInGroup="-1"/>
+    <control controlID="2" controlTypeID="com.balsamiq.mockups::Image" x="155" y="138" w="-1" h="-1" measuredW="77" measuredH="79" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>host%20picture</text>
+      </controlProperties>
+    </control>
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::Label" x="270" y="158" w="-1" h="-1" measuredW="843" measuredH="21" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Read%20all%20about%20your%20great%20stay%20in%20%7B%7BHOUSE%20NAME%7D%7D%21%20%20Your%20host%20%7B%7BHOST%20NAME%7D%7D%20sent%20you%20her%20picks%20on%20best%20things%20to%20do%2C%20best%20restaurants%2C%20and%20</text>
+      </controlProperties>
+    </control>
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::Label" x="278" y="194" w="-1" h="-1" measuredW="135" measuredH="21" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>where%20you%27ll%20be%20staying.</text>
+      </controlProperties>
+    </control>
+    <control controlID="5" controlTypeID="com.balsamiq.mockups::Link" x="270" y="255" w="-1" h="-1" measuredW="31" measuredH="19" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>a%20link</text>
+      </controlProperties>
+    </control>
+    <control controlID="6" controlTypeID="com.balsamiq.mockups::Label" x="154" y="81" w="-1" h="-1" measuredW="372" measuredH="21" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Subject%3A%20We%27re%20turning%20down%20your%20sheets%20at%20%7B%7BHOUSE%20NAME%7D%7D%21%21</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>

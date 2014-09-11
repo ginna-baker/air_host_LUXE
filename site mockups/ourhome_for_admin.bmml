@@ -1,0 +1,68 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="1628" measuredH="823" mockupW="1121" mockupH="731">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="507" y="92" w="1121" h="731" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>My%20Little%20Inn%0Ahttp%3A//www.mylittleinn.com</text>
+      </controlProperties>
+    </control>
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::VSplitter" x="891" y="771" w="431" h="-1" measuredW="100" measuredH="11" zOrder="2" locked="false" isInGroup="-1"/>
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::TabBar" x="507" y="163" w="1121" h="634" measuredW="428" measuredH="100" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Welcome%2C%20Our%20Home%2C%20What%20to%20Do%2C%20Where%20to%20Eat%2C%20Emergencies</text>
+      </controlProperties>
+    </control>
+    <control controlID="7" controlTypeID="com.balsamiq.mockups::PointyButton" x="1546" y="486" w="67" h="-1" measuredW="49" measuredH="27" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <borderStyle>none</borderStyle>
+        <direction>left</direction>
+        <newLayout>true</newLayout>
+        <text>%3E%3E</text>
+      </controlProperties>
+    </control>
+    <control controlID="8" controlTypeID="com.balsamiq.mockups::Title" x="572" y="209" w="-1" h="-1" measuredW="526" measuredH="43" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Our%20Home%3A%20Quirks%20and%20Tricks</text>
+      </controlProperties>
+    </control>
+    <control controlID="9" controlTypeID="com.balsamiq.mockups::TextArea" x="1396" y="562" w="-1" h="-1" measuredW="200" measuredH="140" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>List%20items</text>
+      </controlProperties>
+    </control>
+    <control controlID="10" controlTypeID="com.balsamiq.mockups::TextInput" x="1396" y="285" w="-1" h="-1" measuredW="94" measuredH="27" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>change%20photo</text>
+      </controlProperties>
+    </control>
+    <control controlID="11" controlTypeID="com.balsamiq.mockups::TextInput" x="1396" y="225" w="-1" h="-1" measuredW="123" measuredH="27" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>WELCOME%20TITLE</text>
+      </controlProperties>
+    </control>
+    <control controlID="12" controlTypeID="com.balsamiq.mockups::TextArea" x="1325" y="188" w="303" h="609" measuredW="200" measuredH="140" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="13" controlTypeID="com.balsamiq.mockups::List" x="700" y="507" w="622" h="250" measuredW="100" measuredH="216" zOrder="9" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>TAKING%20A%20SHOWER%3A%20it%20takes%20a%20while%20for%20the%20water%20to%20get%20hot%20in%20the%20upstairs%20bathroom.%20%20%0Aturn%20on%20the%20shower%20by%20pulling%20the%20tab%20under%20the%20bathtub%20faucet.%20%0A%20%0AFAUNA%3A%20If%20a%20gray%20cat%20comes%20around%2C%20that%27s%20just%20our%20neighbors%27%20cat.%20%20Upi%20cam%20pet%20her%2C%20but%20don%27t%20feed%20her.%20%20%0A%20%0AWATCHING%20TV%3A%20How%20to%20use%20the%20TV.%0A%20%0ASTRANGE%20NOISES%3A%0A%20%0ALIGHTS%3A%20Our%20dining%20room%20light%20is%20out%20for%20the%20foreseeable%20future%2C%20so%20we%27ve%20set%20up%20a%20lamp%20in%20there%21%20%20You%20can%20twist%20it%20on%20under%20the%20bulb.</text>
+      </controlProperties>
+    </control>
+    <control controlID="14" controlTypeID="com.balsamiq.mockups::Image" x="635" y="270" w="241" h="222" measuredW="77" measuredH="79" zOrder="10" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="15" controlTypeID="com.balsamiq.mockups::TextInput" x="1399" y="336" w="93" h="-1" measuredW="72" measuredH="27" zOrder="11" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>add%20photo</text>
+      </controlProperties>
+    </control>
+    <control controlID="16" controlTypeID="com.balsamiq.mockups::Image" x="935" y="270" w="240" h="222" measuredW="77" measuredH="79" zOrder="12" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text/>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>

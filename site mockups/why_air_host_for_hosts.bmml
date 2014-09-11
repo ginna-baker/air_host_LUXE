@@ -1,0 +1,46 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="1628" measuredH="823" mockupW="1121" mockupH="731">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="507" y="92" w="1121" h="731" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>My%20Little%20Inn%0Ahttp%3A//www.mylittleinn.com</text>
+      </controlProperties>
+    </control>
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::VSplitter" x="891" y="771" w="431" h="-1" measuredW="100" measuredH="11" zOrder="1" locked="false" isInGroup="-1"/>
+    <control controlID="7" controlTypeID="com.balsamiq.mockups::PointyButton" x="1546" y="486" w="67" h="-1" measuredW="49" measuredH="27" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <borderStyle>none</borderStyle>
+        <direction>left</direction>
+        <newLayout>true</newLayout>
+        <text>%3E%3E</text>
+      </controlProperties>
+    </control>
+    <control controlID="8" controlTypeID="com.balsamiq.mockups::Title" x="569" y="199" w="-1" h="-1" measuredW="324" measuredH="43" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Why%20My%20Air%20Host%3F</text>
+      </controlProperties>
+    </control>
+    <control controlID="18" controlTypeID="com.balsamiq.mockups::TextArea" x="661" y="291" w="493" h="228" measuredW="200" measuredH="140" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>-%20Help%20your%20guests%20feel%20at%20home%20in%20your%20space%0A%20%0A-%20Peace%20of%20mind%20that%20your%20guests%20know%20how%20to%20use%20your%20valuable%20appliances%0A%20%0A-%20Guests%20who%20know%20their%20hosts%20are%20more%20likely%20to%20take%20good%20care%20of%20the%20space%20%0A%20%0A-%20Happy%20guests%20refer%20their%20friends%20%0A%20%0A-%20Emergency%20instructions%20minimize%20your%20liability%20in%20case%20of%20injury%0A%20</text>
+      </controlProperties>
+    </control>
+    <control controlID="22" controlTypeID="com.balsamiq.mockups::PointyButton" x="522" y="486" w="-1" h="-1" measuredW="69" measuredH="27" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <borderStyle>none</borderStyle>
+        <direction>left</direction>
+        <newLayout>true</newLayout>
+        <text>Button</text>
+      </controlProperties>
+    </control>
+    <control controlID="24" controlTypeID="com.balsamiq.mockups::Image" x="1189" y="528" w="186" h="203" measuredW="77" measuredH="79" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="25" controlTypeID="com.balsamiq.mockups::TextArea" x="758" y="574" w="352" h="140" measuredW="200" measuredH="140" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Thanks%20to%20My%20Air%20Host%2C%20our%20Air%20B%20and%20B%20stay%20felt%20like%20a%20resort.%20%20We%20were%20so%20thrilled%20with%20the%20restaurants%20they%20recommended%20that%20we%20left%20them%20a%20note%20in%20return%2C%20recommending%20our%20favorites%21%20%20This%20is%20the%20least%20stressful%20vacation%20we%27ve%20ever%20had.%20%20Looking%20forward%20to%20coming%20back%20next%20year%21%0A%20%0A-%20Brad%20and%20Julie%2C%20Phoenix%2C%20AZ</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>

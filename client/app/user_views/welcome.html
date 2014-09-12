@@ -1,0 +1,14 @@
+<h1>Welcome to {{user.propertyName||"our home"}}</h1>
+<img src="{{user.photos.host_shot}}" class="host-shot">
+<p class="page-body">{{pages.welcome_text}}
+  <!-- sample text: Welcome to the Bravermans'!  We're so excited to have you.  We've lived here for 14 years and really love the area -- we hope you will, too!--></p>
+<a href="/general" class="btn btn-success" ng-click="openPanel=false">NEXT</a>
+<p ng-show="isLoggedIn" class="editButton" ng-click="openPanel=true">EDIT</p>
+
+<div ng-show="openPanel=true" class="adminPanel">
+
+  <input type="text" ng-model="user.propertyName"></input>
+  <!-- Need photo input-->
+  <input type="text" ng-model="pages.welcome_text"></input>
+  <button class="btn btn-success" ng-click="openPanel=false">FINISHED</button>
+</div>

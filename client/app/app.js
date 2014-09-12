@@ -9,6 +9,38 @@ angular.module('myAirHostApp', [
 ])
   .config(function ($routeProvider, $locationProvider, $httpProvider) {
     $routeProvider
+      .when('/about', {
+        templateUrl: 'app/why_use.html',
+        controller: 'MainCtrl'
+      })
+      .when('/:user/:listing', {
+        templateUrl: 'app/welcome.html',
+        controller: 'MainCtrl'
+      })
+      .when('/:user/:listing/general', {
+        templateUrl: 'app/general.html',
+        controller: 'MainCtrl'
+      })
+      .when('/:user/:listing/what_to_do', {
+        templateUrl: 'app/what_to_do.html',
+        controller: 'MainCtrl'
+      })
+      .when('/:user/:listing/where_to_eat', {
+        templateUrl: 'app/where_to_eat.html',
+        controller: 'MainCtrl'
+      })
+      .when('/:user/:listing/emergency', {
+        templateUrl: 'app/emergency.html',
+        controller: 'MainCtrl'
+      })
+      .when('/:user/:listing/xpage1', {
+        templateUrl: 'app/extra_page_1.html',
+        controller: 'MainCtrl'
+      })
+      .when('/:user/:listing/xpage2', {
+        templateUrl: 'app/extra_page_2.html',
+        controller: 'MainCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });

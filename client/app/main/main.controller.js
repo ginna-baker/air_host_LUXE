@@ -15,8 +15,8 @@ angular.module('myAirHostApp')
       if($scope.newThing === '') {
         return;
       }
-      $http.post('/api/things', { name: $scope.newThing });
-      $scope.newThing = '';
+      $http.post('/api/photos', { name: $scope.newPhoto });
+      $scope.newPhoto = '';
     };
 
     $scope.deleteThing = function(thing) {

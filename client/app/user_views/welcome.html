@@ -8,7 +8,16 @@
 <div ng-show="openPanel=true" class="adminPanel">
 
   <input type="text" ng-model="user.propertyName"></input>
-  <!-- Need photo input-->
+  <div flow-init>
+    <input type="file" flow-btn />
+    <input type="file" flow-btn flow-directory />
+    <span flow-btn>Upload File</span>
+    <tr ng-repeat="file in $flow.files">
+      <td>{{$index+1}}</td>
+      <td>{{file.name}}</td>
+    </tr>
+    <img flow-img="$flow.files[0]" />
+  </div>
   <input type="text" ng-model="pages.welcome_text"></input>
   <button class="btn btn-success" ng-click="openPanel=false">FINISHED</button>
 </div>

@@ -5,6 +5,6 @@
 module.exports = {
   // MongoDB connection options
   mongo: {
-    uri: 'mongodb://localhost/myairhost-test'
+    uri: 'mongodb://localhost/airhostluxe-test'
   }
 };

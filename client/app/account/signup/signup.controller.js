@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('myAirHostApp')
-  .controller('SignupCtrl', function ($scope, Auth, $location) {
+  .controller('SignupCtrl', function ($scope, Auth, $location, $http, user) {
     $scope.user = {};
     $scope.errors = {};
 
@@ -15,9 +15,13 @@ angular.module('myAirHostApp')
           password: $scope.user.password
         })
         .then( function() {
-          // Account created, redirect to home
-          $location.path('/');
-        })
+          $http.get('/me').success(function(data) {
+            $scope.data = data;
+            });
+            // Logged in, redirect to home
+            $location.path('/'+$scope.data.name+'/properties.html');
+            });
+           })
         .catch( function(err) {
           err = err.data;
           $scope.errors = {};

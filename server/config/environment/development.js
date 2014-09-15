@@ -5,7 +5,7 @@
 module.exports = {
   // MongoDB connection options
   mongo: {
-    uri: 'mongodb://localhost/myairhost-dev'
+    uri: 'mongodb://localhost/airhostluxe-dev'
   },
 
   seedDB: true

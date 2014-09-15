@@ -5,13 +5,18 @@ angular.module('myAirHostApp', [
   'ngResource',
   'ngSanitize',
   'ngRoute',
-  'ui.bootstrap'
+  'ui.bootstrap',
+  'flow'
 ])
   .config(function ($routeProvider, $locationProvider, $httpProvider) {
     $routeProvider
       .when('/about', {
         templateUrl: 'app/why_use.html',
         controller: 'MainCtrl'
+      })
+      .when('/:user/properties', {
+        templateURL: 'app/listings/listings.html',
+        controller: 'ListingsCtrl'
       })
       .when('/:user/:listing', {
         templateUrl: 'app/welcome.html',
@@ -74,6 +79,12 @@ angular.module('myAirHostApp', [
       }
     };
   })
+
+.config(['flowFactoryProvider', function (flowFactoryProvider) {
+    flowFactoryProvider.defaults = {
+        target: '/:user/photos',
+        permanentErrors:[404, 500, 501]
+    };
 
   .run(function ($rootScope, $location, Auth) {
     // Redirect to login if route requires auth and you're not logged in

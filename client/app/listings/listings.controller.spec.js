@@ -3,7 +3,7 @@
 describe('Controller: ListingsCtrl', function () {
 
   // load the controller's module
-  beforeEach(module('myAirHostApp'));
+  beforeEach(module('airhostluxeApp'));
 
   var ListingsCtrl, scope;
 

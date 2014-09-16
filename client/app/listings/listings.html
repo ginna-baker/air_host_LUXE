@@ -1,18 +1,27 @@
 <div class="col-md-12">
   <div class="interface">
       <h3 class="make-title"><b>MY LISTINGS</b></h3>
-    <ul class="list-group" >
-        <div class="list-group-item" ng-hide="deleted" ng-repeat="listing in {{user}}.listings">
-          <li class="my-listings"><p class="txt"><b>{{listing.propertyName}}</b></p>
-            <div class="right-align">
-              <a href="/{{user}}/{{listing}}" class="btn btn-success centered" data-inline="true">VIEW SITE</button>
-              <button class="btn btn-success" ng-click="editSite(propertyName)" data-inline="true">EDIT SITE</button>
-              <button class="btn btn-warning share" ng-click="" data-inline="true">SEND WELCOME EMAIL</button>
-              <button type="button" class="btn btn-danger" ng-click="deleteThing(listing)" data-inline="true">-</button>
-              <span class="badge badge-primary">{{listing.ratings}}</span>
-            </div>
-          </li>
-      </div>
-    </ul>
+
+    <div class="col-md-12" ng-hide="loggedIn">
+      You must be logged in to view this page.
+      <a href="/signup" class="btn btn-success">SIGN UP</a>
+      <a href="/login" class="btn btn-success">LOG IN</a>
+    </div>
+    <div ng-show="loggedIn">
+      <a href="/:user/:listing/customize" class="btn btn-success">NEW LISTING</a>
+      <ul class="list-group" >
+          <div class="list-group-item" ng-hide="deleted" ng-repeat="listing in {{user}}.listings">
+            <li class="my-listings"><p class="txt"><b>{{listing.propertyName}}</b></p>
+              <div class="right-align">
+                <a href="/{{user}}/{{listing}}" class="btn btn-success centered" data-inline="true">VIEW SITE</button>
+                <button class="btn btn-success" ng-click="editSite(propertyName)" data-inline="true">EDIT SITE</button>
+                <button class="btn btn-warning share" ng-click="" data-inline="true">SEND WELCOME EMAIL</button>
+                <button type="button" class="btn btn-danger" ng-click="deleteListing(listing)" data-inline="true">-</button>
+                <span class="badge badge-primary">{{listing.ratings}}</span>
+              </div>
+            </li>
+        </div>
+      </ul>
+    </div>
   </div>
 </div>

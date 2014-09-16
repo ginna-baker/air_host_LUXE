@@ -14,14 +14,14 @@
         <text>%3E%3E</text>
       </controlProperties>
     </control>
-    <control controlID="8" controlTypeID="com.balsamiq.mockups::Title" x="569" y="199" w="-1" h="-1" measuredW="324" measuredH="43" zOrder="3" locked="false" isInGroup="-1">
+    <control controlID="8" controlTypeID="com.balsamiq.mockups::Title" x="569" y="199" w="-1" h="-1" measuredW="358" measuredH="43" zOrder="3" locked="false" isInGroup="-1">
       <controlProperties>
-        <text>Why%20My%20Air%20Host%3F</text>
+        <text>Why%20Air%20Host%20Luxe%3F</text>
       </controlProperties>
     </control>
     <control controlID="18" controlTypeID="com.balsamiq.mockups::TextArea" x="661" y="291" w="493" h="228" measuredW="200" measuredH="140" zOrder="4" locked="false" isInGroup="-1">
       <controlProperties>
-        <text>-%20Help%20your%20guests%20feel%20at%20home%20in%20your%20space%0A%20%0A-%20Peace%20of%20mind%20that%20your%20guests%20know%20how%20to%20use%20your%20valuable%20appliances%0A%20%0A-%20Guests%20who%20know%20their%20hosts%20are%20more%20likely%20to%20take%20good%20care%20of%20the%20space%20%0A%20%0A-%20Happy%20guests%20refer%20their%20friends%20%0A%20%0A-%20Emergency%20instructions%20minimize%20your%20liability%20in%20case%20of%20injury%0A%20</text>
+        <text>-%20Give%20your%20guests%20the%20star%20treatment.%20AirHost%20Luxe%20hosts%20add%20an%20average%20of%2020%25%20value%20to%20their%20property%20just%20by%20using%20our%20free%20service%21%0A%20%0A-%20Get%20great%20reviews.%20%20AirHost%20Luxe%20members%20receive%2028%25%20higher%20star%20ratings%20than%20peAir%20B%26B%20ers%20with%20properties%20of%20the%20same%20value.%0A%20%0A-%20Guests%20who%20know%20how%20to%20take%20care%20of%20the%20space%20and%20your%20appliances%0A%20%0A-%20Emergency%20instructions%20minimize%20your%20liability%20in%20case%20of%20injury%0A%20%0A-%20Happy%20guests%20refer%20their%20friends%21%0A%20</text>
       </controlProperties>
     </control>
     <control controlID="22" controlTypeID="com.balsamiq.mockups::PointyButton" x="522" y="486" w="-1" h="-1" measuredW="69" measuredH="27" zOrder="5" locked="false" isInGroup="-1">

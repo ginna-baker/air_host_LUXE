@@ -1,9 +1,12 @@
 'use strict';
 
-angular.module('myAirHostApp')
-  .factory('storage', function () {
+angular.module('airhostluxeApp')
+  .factory('storage', function (User) {
     // Service logic
     // ...
+    $http.get('/me').success(function(data) {
+      $scope.data = data;
+    });
 
     var meaningOfLife = 42;
 

@@ -3,7 +3,7 @@
 describe('Controller: CustomizeCtrl', function () {
 
   // load the controller's module
-  beforeEach(module('myAirHostApp'));
+  beforeEach(module('airhostluxeApp'));
 
   var CustomizeCtrl, scope;
 

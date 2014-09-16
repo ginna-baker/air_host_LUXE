@@ -3,7 +3,7 @@
 describe('Service: storage', function () {
 
   // load the service's module
-  beforeEach(module('myAirHostApp'));
+  beforeEach(module('airhostluxeApp'));
 
   // instantiate service
   var storage;

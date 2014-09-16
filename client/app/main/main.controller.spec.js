@@ -3,7 +3,7 @@
 describe('Controller: MainCtrl', function () {
 
   // load the controller's module
-  beforeEach(module('myAirHostApp'));
+  beforeEach(module('airhostluxeApp'));
 
   var MainCtrl,
       scope,
@@ -21,8 +21,8 @@ describe('Controller: MainCtrl', function () {
     });
   }));
 
-  it('should attach a list of things to the scope', function () {
+  it('should attach a list of listings to the scope', function () {
     $httpBackend.flush();
-    expect(scope.awesomeThings.length).toBe(4);
+    expect(scope.awesomeListings.length).toBe(4);
   });
 });

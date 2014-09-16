@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('myAirHostApp')
+angular.module('airhostluxeApp')
   .controller('SettingsCtrl', function ($scope, User, Auth) {
     $scope.errors = {};
 

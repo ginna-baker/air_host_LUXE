@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('myAirHostApp')
+angular.module('airhostluxeApp')
   .config(function ($routeProvider) {
     $routeProvider
       .when('/:user/:listing/customize/', {

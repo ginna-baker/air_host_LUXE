@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('myAirHostApp', [
+angular.module('airhostluxeApp', [
   'ngCookies',
   'ngResource',
   'ngSanitize',
@@ -8,10 +8,14 @@ angular.module('myAirHostApp', [
   'ui.bootstrap',
   'flow'
 ])
-  .config(function ($routeProvider, $locationProvider, $httpProvider) {
+  .config(function ($routeProvider, $locationProvider, $httpProvider, flowFactoryProvider) {
     $routeProvider
-      .when('/about', {
-        templateUrl: 'app/why_use.html',
+      .when('/', {
+        templateUrl: 'app/main/main.html',
+        controller: 'MainCtrl'
+      })
+      .when('/whyluxe', {
+        templateUrl: 'app/why_luxe.html',
         controller: 'MainCtrl'
       })
       .when('/:user/properties', {
@@ -22,8 +26,8 @@ angular.module('myAirHostApp', [
         templateUrl: 'app/welcome.html',
         controller: 'MainCtrl'
       })
-      .when('/:user/:listing/general', {
-        templateUrl: 'app/general.html',
+      .when('/:user/:listing/my_stay', {
+        templateUrl: 'app/my_stay.html',
         controller: 'MainCtrl'
       })
       .when('/:user/:listing/what_to_do', {
@@ -52,6 +56,10 @@ angular.module('myAirHostApp', [
 
     $locationProvider.html5Mode(true);
     $httpProvider.interceptors.push('authInterceptor');
+    flowFactoryProvider.defaults = {
+        target: '/:user/:listing/photos',
+        permanentErrors:[404, 500, 501]
+    };
   })
 
   .factory('authInterceptor', function ($rootScope, $q, $cookieStore, $location) {
@@ -79,12 +87,6 @@ angular.module('myAirHostApp', [
       }
     };
   })
-
-.config(['flowFactoryProvider', function (flowFactoryProvider) {
-    flowFactoryProvider.defaults = {
-        target: '/:user/photos',
-        permanentErrors:[404, 500, 501]
-    };
 
   .run(function ($rootScope, $location, Auth) {
     // Redirect to login if route requires auth and you're not logged in

@@ -1,25 +1,25 @@
 'use strict';
 
-angular.module('myAirHostApp')
-  .controller('MainCtrl', function ($scope, $http) {
+angular.module('airhostluxeApp')
+  .controller('MainCtrl', function ($scope, $http, User) {
     $scope.user;
     $scope.user.photos = [];
 
     $scope.openPanel=false;
 
-    $http.get('/api/things').success(function(awesomeThings) {
-      $scope.awesomeThings = awesomeThings;
+    $http.get('/api/things').success(function(awesomeListings) {
+      $scope.awesomeListings = awesomeListings;
     });
 
-    $scope.addThing = function() {
-      if($scope.newThing === '') {
+    $scope.addListing = function() {
+      if($scope.newListing === '') {
         return;
       }
       $http.post('/api/photos', { name: $scope.newPhoto });
       $scope.newPhoto = '';
     };
 
-    $scope.deleteThing = function(thing) {
+    $scope.deleteListing = function(thing) {
       $http.delete('/api/things/' + thing._id);
     };
   });

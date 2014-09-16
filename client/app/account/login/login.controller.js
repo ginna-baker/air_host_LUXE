@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('myAirHostApp')
+angular.module('airhostluxeApp')
   .controller('LoginCtrl', function ($scope, Auth, $location, $http, user) {
     $scope.user = {};
     $scope.errors = {};

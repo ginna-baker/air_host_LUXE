@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('myAirHostApp')
+angular.module('airhostluxeApp')
   .controller('NavbarCtrl', function ($scope, $location, Auth) {
     $scope.menu = [{
       'title': 'Home',

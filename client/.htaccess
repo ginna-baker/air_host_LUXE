@@ -181,7 +181,7 @@ ErrorDocument 404 /404.html
 # | UTF-8 encoding                                                             |
 # ------------------------------------------------------------------------------
 
-# Use UTF-8 encoding for anything served as `text/html` or `text/plain`.
+# Use UTF-8 encoding for anylisting served as `text/html` or `text/plain`.
 AddDefaultCharset utf-8
 
 # Force UTF-8 for certain file formats.
@@ -435,7 +435,7 @@ FileETag None
 
 # The following expires headers are set pretty far in the future. If you don't
 # control versioning with filename-based cache busting, consider lowering the
-# cache time for resources like CSS and JS to something like 1 week.
+# cache time for resources like CSS and JS to somelisting like 1 week.
 
 <IfModule mod_expires.c>
 

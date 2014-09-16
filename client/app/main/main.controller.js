@@ -3,12 +3,11 @@
 angular.module('airhostluxeApp')
   .controller('MainCtrl', function ($scope, $http, User) {
     $scope.user;
-    $scope.user.photos = [];
 
     $scope.openPanel=false;
 
-    $http.get('/api/things').success(function(awesomeListings) {
-      $scope.awesomeListings = awesomeListings;
+    $http.get('/api/listings').success(function(listings) {
+      $scope.listings = listings;
     });
 
     $scope.addListing = function() {
@@ -19,7 +18,7 @@ angular.module('airhostluxeApp')
       $scope.newPhoto = '';
     };
 
-    $scope.deleteListing = function(thing) {
-      $http.delete('/api/things/' + thing._id);
+    $scope.deleteListing = function(listing) {
+      $http.delete('/api/listings/' + listing._id);
     };
   });

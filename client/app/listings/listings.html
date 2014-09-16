@@ -2,12 +2,7 @@
   <div class="interface">
       <h3 class="make-title"><b>MY LISTINGS</b></h3>
 
-    <div class="col-md-12" ng-hide="loggedIn">
-      You must be logged in to view this page.
-      <a href="/signup" class="btn btn-success">SIGN UP</a>
-      <a href="/login" class="btn btn-success">LOG IN</a>
-    </div>
-    <div ng-show="loggedIn">
+    <div>
       <a href="/:user/:listing/customize" class="btn btn-success">NEW LISTING</a>
       <ul class="list-group" >
           <div class="list-group-item" ng-hide="deleted" ng-repeat="listing in {{user}}.listings">

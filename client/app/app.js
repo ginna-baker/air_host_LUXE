@@ -18,38 +18,44 @@ angular.module('airhostluxeApp', [
         templateUrl: 'app/why_luxe.html',
         controller: 'MainCtrl'
       })
-      .when('/:user/properties', {
+      .when('/:user/listings', {
         templateURL: 'app/listings/listings.html',
-        controller: 'ListingsCtrl'
+        controller: 'ListingsCtrl',
+        authenticate: true
+      })
+      .when('/:user/:listing/customize', {
+        templateURL: 'app/customize/customize.html',
+        controller: 'CustomizeCtrl',
+        authenticate: true
       })
       .when('/:user/:listing', {
-        templateUrl: 'app/welcome.html',
+        templateUrl: 'app/assets/oceanica/html/index.html',
         controller: 'MainCtrl'
       })
-      .when('/:user/:listing/my_stay', {
-        templateUrl: 'app/my_stay.html',
-        controller: 'MainCtrl'
-      })
-      .when('/:user/:listing/what_to_do', {
-        templateUrl: 'app/what_to_do.html',
-        controller: 'MainCtrl'
-      })
-      .when('/:user/:listing/where_to_eat', {
-        templateUrl: 'app/where_to_eat.html',
-        controller: 'MainCtrl'
-      })
-      .when('/:user/:listing/emergency', {
-        templateUrl: 'app/emergency.html',
-        controller: 'MainCtrl'
-      })
-      .when('/:user/:listing/xpage1', {
-        templateUrl: 'app/extra_page_1.html',
-        controller: 'MainCtrl'
-      })
-      .when('/:user/:listing/xpage2', {
-        templateUrl: 'app/extra_page_2.html',
-        controller: 'MainCtrl'
-      })
+      // .when('/:user/:listing/my_stay', {
+      //   templateUrl: 'app/my_stay.html',
+      //   controller: 'MainCtrl'
+      // })
+      // .when('/:user/:listing/what_to_do', {
+      //   templateUrl: 'app/what_to_do.html',
+      //   controller: 'MainCtrl'
+      // })
+      // .when('/:user/:listing/where_to_eat', {
+      //   templateUrl: 'app/where_to_eat.html',
+      //   controller: 'MainCtrl'
+      // })
+      // .when('/:user/:listing/emergency', {
+      //   templateUrl: 'app/emergency.html',
+      //   controller: 'MainCtrl'
+      // })
+      // .when('/:user/:listing/xpage1', {
+      //   templateUrl: 'app/extra_page_1.html',
+      //   controller: 'MainCtrl'
+      // })
+      // .when('/:user/:listing/xpage2', {
+      //   templateUrl: 'app/extra_page_2.html',
+      //   controller: 'MainCtrl'
+      // })
       .otherwise({
         redirectTo: '/'
       });

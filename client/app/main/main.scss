@@ -19,9 +19,23 @@ h1 span {
    padding: 10px;
 }
 
+.myListings {
+  color: white;
+  background: rgb(0, 0, 0); /* fallback color */
+  background: rgba(0, 0, 0, 0.7);
+  /* make background transparent*/
+  padding: 10px;
+  z-index: 50;
+  display: block;
+  top: 100px;
+  left: 50px;
+  .right-align {
+    float: right;
+  }
+}
+
 #titleText {
   color: white;
-  float: right;
   position: absolute;
   z-index: 50;
   display: block;

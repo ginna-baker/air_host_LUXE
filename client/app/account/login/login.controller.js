@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('airhostluxeApp')
-  .controller('LoginCtrl', function ($scope, Auth, $location, $http, user) {
+  .controller('LoginCtrl', function ($scope, Auth, $location, $http, User) {
     $scope.user = {};
     $scope.errors = {};
 
@@ -16,9 +16,10 @@ angular.module('airhostluxeApp')
         .then( function() {
           $http.get('/me').success(function(data) {
             $scope.data = data;
+            console.log(data);
             });
             // Logged in, redirect to home
-            $location.path('/'+$scope.data.name+'/listings.html');
+          $location.path("'/'+$scope.data.name+'/listings.html'");
           })
         .catch( function(err) {
           $scope.errors.other = err.message;

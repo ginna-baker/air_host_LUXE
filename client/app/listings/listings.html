@@ -1,15 +1,19 @@
+<div ng-include="'components/navbar/navbar.html'"></div>
+
+<img src="assets/oceanica/html/images/ocean.jpg" id="oceanPic">
+
 <div class="col-md-12">
-  <div class="interface">
-      <h3 class="make-title"><b>MY LISTINGS</b></h3>
+  <div class="myListings">
+      <h3><b>MY LISTINGS</b></h3>
 
     <div>
-      <a href="/:user/:listing/customize" class="btn btn-success">NEW LISTING</a>
+      <a href="/{{user}}/customize" class="btn btn-success">NEW LISTING</a>
       <ul class="list-group" >
           <div class="list-group-item" ng-hide="deleted" ng-repeat="listing in {{user}}.listings">
             <li class="my-listings"><p class="txt"><b>{{listing.propertyName}}</b></p>
               <div class="right-align">
                 <a href="/{{user}}/{{listing}}" class="btn btn-success centered" data-inline="true">VIEW SITE</button>
-                <button class="btn btn-success" ng-click="editSite(propertyName)" data-inline="true">EDIT SITE</button>
+                <button class="btn btn-success" ng-click="editSite({{listing._id}})" data-inline="true">EDIT SITE</button>
                 <button class="btn btn-warning share" ng-click="" data-inline="true">SEND WELCOME EMAIL</button>
                 <button type="button" class="btn btn-danger" ng-click="deleteListing(listing)" data-inline="true">-</button>
                 <span class="badge badge-primary">{{listing.ratings}}</span>

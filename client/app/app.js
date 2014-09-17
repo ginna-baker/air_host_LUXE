@@ -10,10 +10,6 @@ angular.module('airhostluxeApp', [
 ])
   .config(function ($routeProvider, $locationProvider, $httpProvider, flowFactoryProvider) {
     $routeProvider
-      .when('/', {
-        templateUrl: 'app/main/main.html',
-        controller: 'MainCtrl'
-      })
       .when('/whyluxe', {
         templateUrl: 'app/why_luxe.html',
         controller: 'MainCtrl'
@@ -56,6 +52,10 @@ angular.module('airhostluxeApp', [
       //   templateUrl: 'app/extra_page_2.html',
       //   controller: 'MainCtrl'
       // })
+      .when('/', {
+        templateUrl: 'app/main/main.html',
+        controller: 'MainCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });

@@ -1,18 +1,14 @@
 'use strict';
 
 angular.module('airhostluxeApp')
-  .controller('ListingsCtrl', function ($scope, $http, Auth, User) {
+  .controller('ListingsCtrl', function ($scope, $location, $http, Auth, User) {
 
     $scope.isLoggedIn = Auth.isLoggedIn;
-    $scope.user = Auth.getCurrentUser;
-
-    $http.get('api/users/me').success(function(data) {
-      $scope.data = data;
-    });
+    $scope.user = Auth.getCurrentUser();
 
     $scope.editSite = function(id) {
-      $location.path("/")
-    }
+      $location.path("/");
+    };
 
     $http.get('/api/listings').success(function(listings) {
       $scope.listings = listings;
@@ -22,6 +18,6 @@ angular.module('airhostluxeApp')
       if($scope.newListing === '') {
         return;
       }
-
+    };
 
     });

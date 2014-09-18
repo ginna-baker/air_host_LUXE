@@ -19,7 +19,7 @@ angular.module('airhostluxeApp')
             console.log(data);
             });
             // Logged in, redirect to home
-          $location.path("'/'+$scope.data.name+'/listings.html'");
+          $location.path($scope.data.name+'/listings.html');
           })
         .catch( function(err) {
           $scope.errors.other = err.message;

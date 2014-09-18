@@ -9,14 +9,13 @@
     <div>
       <a href="/{{user}}/customize" class="btn btn-success">NEW LISTING</a>
       <ul class="list-group" >
-          <div class="list-group-item" ng-hide="deleted" ng-repeat="listing in {{user}}.listings">
-            <li class="my-listings"><p class="txt"><b>{{listing.propertyName}}</b></p>
+          <div class="list-group-item" ng-hide="deleted" ng-repeat="listing in listings">
+            <li class="my-listings"><p class="txt"><b>{{listing.property_info.name}}</b></p>
               <div class="right-align">
-                <a href="/{{user}}/{{listing}}" class="btn btn-success centered" data-inline="true">VIEW SITE</button>
-                <button class="btn btn-success" ng-click="editSite({{listing._id}})" data-inline="true">EDIT SITE</button>
+                <a href="{{user}}+'/'+{{listing._id}}" class="btn btn-success centered" data-inline="true">VIEW SITE</button>
+                <button class="btn btn-success" ng-click="editSite(id)" data-inline="true">EDIT SITE</button>
                 <button class="btn btn-warning share" ng-click="" data-inline="true">SEND WELCOME EMAIL</button>
                 <button type="button" class="btn btn-danger" ng-click="deleteListing(listing)" data-inline="true">-</button>
-                <span class="badge badge-primary">{{listing.ratings}}</span>
               </div>
             </li>
         </div>

@@ -10,7 +10,7 @@ angular.module('airhostluxeApp', [
 ])
   .config(function ($routeProvider, $locationProvider, $httpProvider, flowFactoryProvider) {
     $routeProvider
-      .when('/whyluxe', {
+      .when('/why_luxe', {
         templateUrl: 'app/why_luxe.html',
         controller: 'MainCtrl'
       })
@@ -19,13 +19,13 @@ angular.module('airhostluxeApp', [
         controller: 'ListingsCtrl',
         authenticate: true
       })
-      .when('/:user/:listing/customize', {
+      .when('/:user/new', {
         templateURL: 'app/customize/customize.html',
         controller: 'CustomizeCtrl',
         authenticate: true
       })
-      .when('/:user/:listing', {
-        templateUrl: 'app/assets/oceanica/html/index.html',
+      .when('/:user/:listing/view', {
+        templateUrl: '/app/assets/oceanica/html/index.html',
         controller: 'MainCtrl'
       })
       // .when('/:user/:listing/my_stay', {

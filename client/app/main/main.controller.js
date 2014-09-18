@@ -50,8 +50,9 @@ angular.module('airhostluxeApp')
           "place_note": $scope.listing.what_to_do.place_note
         },
         "where_to_eat": {
-          "msg": $scope.listing.where_to_eat.msg;
+          "msg": $scope.listing.where_to_eat.msg,
           "photo": $scope.listing.where_to_eat.photo,
+          "place_name": $scope.listing.where_to_eat.place_address,
           "place_address": $scope.listing.where_to_eat.place_address,
           "place_note": $scope.listing.where_to_eat.place_note
         },
@@ -67,7 +68,7 @@ angular.module('airhostluxeApp')
           "msg": $scope.listing.custom_page.msg,
           "active_bool": $scope.listing.custom_page.active_bool
         },
-        "active": true;
+        "active": true
       });
     $location.path('home');
     };

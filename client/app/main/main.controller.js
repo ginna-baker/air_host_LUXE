@@ -24,57 +24,58 @@ angular.module('airhostluxeApp')
       }
 
       var postObj = {};
-
       postObj.property_info = $scope.listing.property_info;
-
+        // "property_info": {
+        //   "name": $scope.listing.property_info.propoerty_name,
+        //   "big_photo": $scope.listing.property_info.photo,
+        //   "tagline": $scope.listing.property_info.tagline,
+        //   "street_address": $scope.listing.property_info.street_address,
+        //   "city": $scope.listing.property_info.city,
+        //   "country": $scope.listing.property_info.country,
+        //   "airbnb_url": $scope.listing.property_info.airbnburl,
+        //   "airbnb_rating": $scope.listing.property_info.airbnbrating,
+        //   "airbnb_guest_count": $scope.listing.propoerty_info.airbnb_guest_count,
+        $scope.listing.property_info.luxe_url = $scope.user.name +"/"+ $scope.generateUrlName();
+        postObj.your_stay = $scope.listing.your_stay;
+        // "your_stay": {
+        //   "msg": $scope.listing.your_stay.msg,
+        //   "house_info": $scope.listing.your_stay.house_info,
+        //   "tv_instructions": $scope.listing.your_stay.wireless_pwd,
+        //   "wireless_pwd": $scope.listing.your_stay.wireless_pwd,
+        //   "rules": $scope.listing.your_stay.house_rules
+        // },
+        postObj.what_to_do = $scope.listing.what_to_do;
+        // "what_to_do": {
+        //   "msg": $scope.listing.what_to_do.msg,
+        //   "place_name": $scope.listing.what_to_do.place_name,
+        //   "place_address": $scope.listing.what_to_do.place_address,
+        //   "place_note": $scope.listing.what_to_do.place_note
+        // },
+        postObj.where_to_eat = $scope.listing.where_to_eat;
+        // "where_to_eat": {
+        //   "msg": $scope.listing.where_to_eat.msg,
+        //   "place_name": $scope.listing.where_to_eat.place_address,
+        //   "place_address": $scope.listing.where_to_eat.place_address,
+        //   "place_note": $scope.listing.where_to_eat.place_note
+        // },
+        postObj.emergency = $scope.listing.emergency;
+        // "emergency": {
+        //   "call_number": $scope.listing.emergency.call_number,
+        $scope.listing.emergency.poison_ctrl_center ="1-800-222-1222";
+        //   "first_aid_kit": $scope.listing.emergency.first_aid_kit,
+        //   "hospital_address": $scope.listing.emergency.hospital_address
+        // },
+        // postObj.custom_page = $scope.listing.custom_page;
+        // "custom_page": {
+        //   "photo": $scope.listing.custom_page.photo,
+        //   "msg": $scope.listing.custom_page.msg,
+        //   "active_bool": $scope.listing.custom_page.active_bool
+        // },
       $http.post('/api/listings/', {
-        "date": new Date(),
-        "user": {
-          "_id": $scope.user._id,
-          "profile_photo": $scope.listing.profile_photo
-        },
-        "property_info": {
-          "name": $scope.listing.property_info.propoerty_name,
-          "big_photo": $scope.listing.property_info.photo,
-          "tagline": $scope.listing.property_info.tagline,
-          "street_address": $scope.listing.property_info.street_address,
-          "city": $scope.listing.property_info.city,
-          "country": $scope.listing.property_info.country,
-          "airbnb_url": $scope.listing.property_info.airbnburl,
-          "airbnb_rating": $scope.listing.property_info.airbnbrating,
-          "airbnb_guest_count": $scope.listing.propoerty_info.airbnb_guest_count,
-          "luxe_url": $scope.user.name +"/"+ $scope.generateUrlName()
-        },
-        "your_stay": {
-          "msg": $scope.listing.your_stay.msg,
-          "house_info": $scope.listing.your_stay.house_info,
-          "tv_instructions": $scope.listing.your_stay.wireless_pwd,
-          "wireless_pwd": $scope.listing.your_stay.wireless_pwd,
-          "rules": $scope.listing.your_stay.house_rules
-        },
-        "what_to_do": {
-          "msg": $scope.listing.what_to_do.msg,
-          "place_name": $scope.listing.what_to_do.place_name,
-          "place_address": $scope.listing.what_to_do.place_address,
-          "place_note": $scope.listing.what_to_do.place_note
-        },
-        "where_to_eat": {
-          "msg": $scope.listing.where_to_eat.msg,
-          "place_name": $scope.listing.where_to_eat.place_address,
-          "place_address": $scope.listing.where_to_eat.place_address,
-          "place_note": $scope.listing.where_to_eat.place_note
-        },
-        "emergency": {
-          "call_number": $scope.listing.emergency.call_number,
-          "poison_ctrl_center": $scope.listing.emergency.poison_ctrl_center,
-          "first_aid_kit": $scope.listing.emergency.first_aid_kit,
-          "hospital_address": $scope.listing.emergency.hospital_address
-        },
-        "custom_page": {
-          "photo": $scope.listing.custom_page.photo,
-          "msg": $scope.listing.custom_page.msg,
-          "active_bool": $scope.listing.custom_page.active_bool
-        },
+        $scope.date = new Date(),
+        $scope.user._id,
+        $scope.user.profile_photo,
+        postObj,
         "active": true
       });
     $location.path('home');

@@ -5,8 +5,8 @@ div.navbar {
 }
 
 img {
-  z-index: 1;
-  position: relative;
+  z-index: -1;
+  position: absolute;
   width: 100%;
 }
 
@@ -32,6 +32,8 @@ h1 span {
   .right-align {
     float: right;
   }
+  position: absolute;
+  vertical-align: top;
 }
 
 #titleText {

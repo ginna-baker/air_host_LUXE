@@ -19,10 +19,9 @@ angular.module('airhostluxeApp', [
         controller: 'ListingsCtrl',
         authenticate: true
       })
-      .when('/:user/new', {
-        templateURL: 'app/customize/customize.html',
-        controller: 'CustomizeCtrl',
-        authenticate: true
+      .when('/:user/new/', {
+        templateUrl: 'app/customize/customize.html',
+        controller: 'CustomizeCtrl'
       })
       .when('/:user/:listing/view', {
         templateUrl: '/app/assets/oceanica/html/index.html',

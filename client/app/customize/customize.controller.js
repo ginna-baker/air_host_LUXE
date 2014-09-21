@@ -2,13 +2,24 @@
 
 angular.module('airhostluxeApp')
   .controller('CustomizeCtrl', function ($scope, $http, Auth, User) {
-    $scope.message = 'Hello';
-    if (isLoggedIn() === true) {
-      $scope.loggedIn = true;
-    }
+
+    $scope.isLoggedIn = Auth.isLoggedIn;
+
+    console.log("test");
 
     $http.get('/me').success(function(data) {
       $scope.data = data;
     });
+
+    $scope.step=1;
+
+    $scope.back = function () {
+      $scope.step--;
+    };
+
+    $scope.advance = function () {
+      $scope.step++;
+    };
+
 
   });

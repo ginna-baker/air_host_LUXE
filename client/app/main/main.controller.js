@@ -72,10 +72,12 @@ angular.module('airhostluxeApp')
         //   "active_bool": $scope.listing.custom_page.active_bool
         // },
       $http.post('/api/listings/', {
-        $scope.date = new Date(),
-        $scope.user._id,
-        $scope.user.profile_photo,
-        postObj,
+        'date': new Date(),
+        'user': {
+          'user_id': $scope.user._id,
+          'profile_photo': $scope.user.profile_photo
+        },
+        'postObj': postObj,
         "active": true
       });
     $location.path('home');

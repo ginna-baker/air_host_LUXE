@@ -11,16 +11,16 @@ angular.module('airhostluxeApp', [
   .config(function ($routeProvider, $locationProvider, $httpProvider, flowFactoryProvider) {
     $routeProvider
       .when('/why_luxe', {
-        templateUrl: 'app/why_luxe.html',
+        templateUrl: '/app/why_luxe.html',
         controller: 'MainCtrl'
       })
       .when('/:user/listings', {
-        templateURL: 'app/listings/listings.html',
+        templateURL: '/app/listings/listings.html',
         controller: 'ListingsCtrl',
         authenticate: true
       })
       .when('/:user/new/', {
-        templateUrl: 'app/customize/customize.html',
+        templateUrl: '/app/customize/customize.html',
         controller: 'CustomizeCtrl'
       })
       .when('/:user/:listing/view', {
@@ -52,7 +52,7 @@ angular.module('airhostluxeApp', [
       //   controller: 'MainCtrl'
       // })
       .when('/', {
-        templateUrl: 'app/main/main.html',
+        templateUrl: '/app/main/main.html',
         controller: 'MainCtrl'
       })
       .otherwise({

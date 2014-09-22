@@ -6,12 +6,12 @@ angular.module('airhostluxeApp')
 
     $scope.openPanel=false;
 
-    $http.get('/api/listings').success(function(listings) {
+    $http.get('/api/listing').success(function(listings) {
       $scope.listings = listings;
     });
 
-    $scope.deleteListing = function(listing) {
-      $http.delete('/api/listings/' + $scope.listing._id);
+    $scope.deleteListing = function() {
+      $http.delete('/api/listing/' + $scope.listings._id);
     };
 
  // * POST    /listings              ->  create
@@ -71,7 +71,7 @@ angular.module('airhostluxeApp')
         //   "msg": $scope.listing.custom_page.msg,
         //   "active_bool": $scope.listing.custom_page.active_bool
         // },
-      $http.post('/api/listings/', {
+      $http.post('/api/listing/', {
         'date': new Date(),
         'user': {
           'user_id': $scope.user._id,

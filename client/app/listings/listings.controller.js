@@ -10,7 +10,7 @@ angular.module('airhostluxeApp')
       $location.path("/");
     };
 
-    $http.get('/api/listings').success(function(listings) {
+    $http.get('/api/listing').success(function(listings) {
       $scope.listings = listings;
     });
 

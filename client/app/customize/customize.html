@@ -6,28 +6,33 @@
 <form name="newListing" class="">
   <span class="ion-chevron-left" ng-click="back()" ng-hide="step===1"></span>
   <div ng-show="step===1">
+    <h2>Let us do the heavy lifting!  What is your property's AirBNB URL?</h2>
+      <input type="text" placeholder="https://www.airbnb.com/rooms/1747206?s=tBpwerjk" ng-model="listing.property_info.airbnb_url"></input>
+      <button class="btn btn-success" ng-click="scrape()">NEXT</button>
+  </div>
+  <div ng-show="step===2">
+    <h2>Getting info from airbnb...</h2>
+    <!-- spinner -->
+  </div>
+  <div ng-show="step===3">
     <div class="pageview">
     <h2>Can we get a little information to help us frame your page?</h2>
       <h4>Name your listing</h4>
         <input type="text" placeHolder="Little House in the Woods" ng-model="listing.property_info.name" class="form-control"></input>
       <h4>Choose a tagline</h4>
         <input type="text" class="tagline form-control" placeholder="A quiet refuge" ng-model="listing.property_info.tagline"></input>
-      <h4>Street address (not displayed to user)</h4>
-        <input type="text" class="form-control" placeholder="111 Solitude Lane" ng-model="listing.property_info.address"></input>
-      <h4>City</h4>
-        <input type="text" class="form-control" placeholder="Staunton" ng-model="listing.property_info.city"></input>
-      <h4>Postal Code</h4>
-        <input type="text" class="form-control" placeholder="11000" ng-model="listing.property_info.postal_code" ng-valid=""/></input>
-      <h4>Country</h4>
-        <input type="text" class="form-control" placeholder="USA" ng-model="listing.property_info.country"></input>
-      <h4>Upload a profile photo</h4>
-        <input type="file" class="form-control" ng-model="user.profile_photo" accept="*.jpg"></input>
-      <h4>High-res photo of your listing: Suggested min: 1 MB or 800x800
-        <input type="file" class="form-control" accept="*.jpg" ng-model="listing.property_info.photo"></input>
+      <div ng-show="listing.property_info.airbnb_url==undefined">
+        <h4>City</h4>
+          <input type="text" class="form-control" placeholder="Staunton" ng-model="listing.property_info.city" value="{{json.city}}"></input>
+        <h4>Upload a profile photo</h4>
+          <input type="file" class="form-control" ng-model="user.profile_photo" accept="*.jpg"></input>
+        <h4>High-res photo of your listing: Suggested min: 1 MB or 800x800
+          <input type="file" class="form-control" accept="*.jpg" ng-model="listing.property_info.photo"></input>
       </div>
+    </div>
   </div>
 
-  <div ng-show="step===2">
+  <div ng-show="step===4">
     <div class="pageview">
     <h2>Help your guest get acclimated to your home.</h2>
       <h4>Welcome message</h4>
@@ -43,7 +48,7 @@
 
       <!-- need house rules here? should scrape-->
 
-  <div ng-show="step===3">
+  <div ng-show="step===5">
     <div class="pageview">
     <h2>To give your guests the best experience possible, please recommend some great places for them to visit. 6-8 choices will give them the best range of options without overwhelming them.</h2>
 
@@ -70,7 +75,7 @@
     </div>
   </div>
 
-  <div ng-show="step===4"
+  <div ng-show="step===6"
     <div class="pageview">
     <h2>What are some of your favorite restaurants in the area?  Think of things that visitors to your area might find unique, a cultural experience, or adventurous.
       <h4>Restaurant Name</h4>
@@ -82,7 +87,7 @@
     </div>
   </div>
 
-  <div ng-show="step===5">
+  <div ng-show="step===7">
     <div class="pageview">
     <h2>Please list some emergency information</h2>
         <h4>Emergency number</h4>

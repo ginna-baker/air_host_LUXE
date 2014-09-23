@@ -48,14 +48,14 @@ angular.module('airhostluxeApp')
         // "what_to_do": {
         //   "msg": $scope.listing.what_to_do.msg,
         //   "place_name": $scope.listing.what_to_do.place_name,
-        //   "place_address": $scope.listing.what_to_do.place_address,
+        //   "place_address": $scope.listing.what_to_do.url,
         //   "place_note": $scope.listing.what_to_do.place_note
         // },
         postObj.where_to_eat = $scope.listing.where_to_eat;
         // "where_to_eat": {
         //   "msg": $scope.listing.where_to_eat.msg,
         //   "place_name": $scope.listing.where_to_eat.place_address,
-        //   "place_address": $scope.listing.where_to_eat.place_address,
+        //   "place_address": $scope.listing.where_to_eat.url,
         //   "place_note": $scope.listing.where_to_eat.place_note
         // },
         postObj.emergency = $scope.listing.emergency;

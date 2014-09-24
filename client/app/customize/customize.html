@@ -1,13 +1,16 @@
 <div ng-include="'components/navbar/navbar.html'"></div>
 
 <img src="assets/oceanica/html/images/ocean.jpg" id="oceanPic">
-
-<div class="white-back"</div>
-<form name="newListing" class="">
-  <span class="ion-chevron-left" ng-click="back()" ng-hide="step===1"></span>
-  <div ng-show="step===1">
+<button ng-click="addListing()">POST</button>
+<div class="white-back">
+  <div class="leftSide">
+    <span class="ion-chevron-left" ng-click="back()" ng-hide="step===1"></span>
+  </div><!--
+ --><div class="middleSide" style="height: 100%">
+<form name="listing" class="">
+  <div ng-show="step===1" style="height: 100%">
     <h2>Let us do the heavy lifting!  What is your property's AirBNB URL?</h2>
-      <input type="text" placeholder="https://www.airbnb.com/rooms/1747206?s=tBpwerjk" ng-model="listing.property_info.airbnb_url"></input>
+      <input type="text" placeholder="https://www.airbnb.com/rooms/1747206?s=tBpwerjk" ng-model="listing.property_info.airbnb_url" class="form-control"></input>
       <button class="btn btn-success" ng-click="scrape()">NEXT</button>
   </div>
   <div ng-show="step===2">
@@ -21,14 +24,14 @@
         <input type="text" placeHolder="Little House in the Woods" ng-model="listing.property_info.name" class="form-control"></input>
       <h4>Choose a tagline</h4>
         <input type="text" class="tagline form-control" placeholder="A quiet refuge" ng-model="listing.property_info.tagline"></input>
-      <div ng-show="listing.property_info.airbnb_url==undefined">
+<!--       <div ng-show="listing.property_info.airbnb_url==undefined">
         <h4>City</h4>
           <input type="text" class="form-control" placeholder="Staunton" ng-model="listing.property_info.city" value="{{json.city}}"></input>
         <h4>Upload a profile photo</h4>
           <input type="file" class="form-control" ng-model="user.profile_photo" accept="*.jpg"></input>
         <h4>High-res photo of your listing: Suggested min: 1 MB or 800x800
           <input type="file" class="form-control" accept="*.jpg" ng-model="listing.property_info.photo"></input>
-      </div>
+      </div> -->
     </div>
   </div>
 
@@ -36,68 +39,80 @@
     <div class="pageview">
     <h2>Help your guest get acclimated to your home.</h2>
       <h4>Welcome message</h4>
-        <input type="text" class="form-control" ng-model="listing.your_stay.msg" placeholder="Here's some info to help you get settled in.  Enjoy your stay!"></input>
+        <textarea class="form-control" ng-model="listing.your_stay.msg" placeholder="Here's some info to help you get settled in."/>
       <h4>Your wifi password's location, if applicable. For security, we recommend taping it somewhere (like the refrigerator) rather than listing it on this page.</h4>
-        <input type="text" class="form-control" ng-model="listing.your_stay.wireless_pwd" placeholder="Our wifi password is located..."></input>
+        <textarea class="form-control" ng-model="listing.your_stay.wireless_pwd" placeholder="Our wifi password is located..."/>
       <h4>How to use your TV/cable/roku (brief)</h4>
-        <input type="text" class="form-control" ng-model="listing.your_stay.tv_instructions" placeholder="Feel free to use our TV! Just turn it on with the black remote's power button..."></input>
+        <textarea class="form-control" ng-model="listing.your_stay.tv_instructions" placeholder="Feel free to use our TV! The black remote's power button..."/>
       <h4>List any special instructions about your house, shower, things under repair, strange sounds, etc.</h4>
-        <input type="text" class="form-control" ng-model="listing.your_stay.house_info" placeholder="Our home is an older one, so some things are under repair.  The light switches in the dining room turn on the kitchen light..."></input>
+        <textarea class="form-control" ng-model="listing.your_stay.house_info" placeholder="The upstairs shower takes time to get hot..."/>
+      <h4>What should your guests keep in mind about your neighborhood?</h4>
+        <textarea class="form-control" ng-model="listing.your_stay.neighborhood_info" placeholder="While our neighborhood is generally safe..."/>
     </div>
   </div>
 
       <!-- need house rules here? should scrape-->
 
   <div ng-show="step===5">
+    <form name="activities" ng-model="listing.what_to_do" method="POST">
     <div class="pageview">
-    <h2>To give your guests the best experience possible, please recommend some great places for them to visit. 6-8 choices will give them the best range of options without overwhelming them.</h2>
+    <h2>Please recommend some great places for your guests to visit. 6-8 choices will give them the best range of options.</h2>
 
-        <select>
-          <option class="form-control" ng-model="listing.what_to_do.type" value="museum">Museum</option>
-          <option class="form-control" ng-model="listing.what_to_do.type" value="park">Park</option>
-          <option class="form-control" ng-model="listing.what_to_do.type" value="night_life">Night Life</option>
-          <option class="form-control" ng-model="listing.what_to_do.type" value="sports">Sports</option>
-          <option class="form-control" ng-model="listing.what_to_do.type" value="arts">Arts</option>
-          <option class="form-control" ng-model="listing.what_to_do.type" value="outdoor">Outdoor Activities</option>
-          <option class="form-control" ng-model="listing.what_to_do.type" value="local_hangouts">Local Hangouts</option>
-          <option class="form-control" ng-model="listing.what_to_do.type" value="shopping">Shopping</option>
+        <select ng-model="listing.what_to_do.select">
+          <option class="form-control"  value="museum">Museum</option>
+          <option class="form-control" value="park">Park</option>
+          <option class="form-control" value="night_life">Night Life</option>
+          <option class="form-control" value="sports">Sports</option>
+          <option class="form-control" value="arts">Arts</option>
+          <option class="form-control" value="outdoor">Outdoor Activities</option>
+          <option class="form-control" value="local_hangouts">Local Hangouts</option>
+          <option class="form-control" value="shopping">Shopping</option>
         </select>
 
-      <h4>Name of the place</h4>
-        <input type="text" class="form-control" ng-model="listing.what_to_do.name"></input>
+      <h4>Name of place</h4>
+        <input type="text" class="form-control" ng-model="listing.what_to_do.place"></input>
       <h4>Place's web address</h4>
-        <input type="text" class="form-control" ng-model="listing.what_to_do.name"></input>
+        <input type="text" class="form-control" ng-model="listing.what_to_do.url"></input>
       <h4>What's special about this place?</h4>
-        <input type="text" class="form-control" ng-model="listing.what_to_do.note" placeholder="We are big fans of..."></input>
-
-        <button class="btn btn-success" ng-click="resetSelect()">Save and Add</button>
-        <button class="btn btn-success" ng-click="resetSelect()">Save and Finish</button>
+        <textarea class="form-control" ng-model="listing.what_to_do.note" placeholder="We are big fans of..."></textarea>
+        <button class="btn btn-success" ng-click="recyclePlace()" action="submit">Save and Next</button>
+        <button class="btn btn-success" ng-click="recyclePlaceFinish()" action="submit">Save and Finish</button>
     </div>
+    </form>
+    <ul id="placeList" ng-repeat="place in placeList">
+      <li>{{place}}</li>
+    </ul>
   </div>
 
   <div ng-show="step===6"
+    <form name="food" ng-model="listing.where_to_eat">
     <div class="pageview">
     <h2>What are some of your favorite restaurants in the area?  Think of things that visitors to your area might find unique, a cultural experience, or adventurous.
       <h4>Restaurant Name</h4>
-        <input type="text" class="form-control" ng-model="listing.where_to_eat.place_name"></input>
+        <input type="text" class="form-control" ng-model="listing.where_to_eat.restaurant"></input>
+      <h4>Restaurant Web Address</h4>
+        <input type="text" class="form-control" ng-model="listing.where_to_eat.url"></input>
       <h4>What's great about this venue?</h4>
-        <input type="text" class="form-control" ng-model="listing.where_to_eat.place_note" placeholder="This place's crepes are divine.  The prices are unbeatable, too."></input>
-        <button class="btn btn-success" ng-click="resetSelect()">Save and Add</button>
-        <button class="btn btn-success" ng-click="resetSelect()">Save and Finish</button>
+        <textarea type="text" class="form-control" ng-model="listing.where_to_eat.note" placeholder="This place's crepes are divine.  The prices are unbeatable, too."></textarea>
+        <button class="btn btn-success" ng-click="recycleFood()">Save and Add</button>
+        <button class="btn btn-success" ng-click="recycleFoodFinish()">Save and Finish</button>
     </div>
+    </form>
   </div>
 
   <div ng-show="step===7">
     <div class="pageview">
     <h2>Please list some emergency information</h2>
-        <h4>Emergency number</h4>
-        <input type="text" class="form-control" ng-model="listing.emergency.call_number" value="911"></input>
       <h4>Where is your first-aid kit located?</h4>
         <input type="text" class="form-control" ng-model="listing.emergency.first_aid_kid"></input>
       <h4>What is the name of the nearest hospital?</h4>
         <input type="text" class="form-control" ng-model="listing.emergency.hospital"></input>
+      <button class="btn btn-success" ng-click="addListing()">SUBMIT</button>
     </div>
   </div>
-  <span class="ion-chevron-right" ng-click="advance()" ng-hide="step===5"></span>
 </form>
+</div><!--
+--><div class="rightSide">
+  <span class="ion-chevron-right" ng-click="advance()" ng-hide="step===5" style="z-index: 100"></span>
+</div>
 </div>

@@ -1,6 +1,16 @@
+body {
+  color: #333;
+}
 
+#logo {
+  width: 30px;
+  position: absolute;
+  margin-top: 10px;
+  margin-left: 10px;
+}
 
 div.navbar {
+  margin-left: 40px;
   margin-bottom: 0;
 }
 
@@ -55,28 +65,33 @@ h1 span {
   padding: 50px 20px;
   background-color: rgba(255, 255, 255, 0.6);
   position: absolute;
+  color: #333;
 }
 
 #guest-review {
   height: 600px;
   width: 500px;
   background-color: rgba(255, 255, 255, 0.6);
-  margin: 273px 100px 0 800px;
+  margin: 300px 100px 0 800px;
   position: absolute;
   z-index: 0;
-  -webkit-shape-outside:circle();
-  shape-outside:circle();
+    text-align: center;
+}
+
+#guest-review-p {
+  margin-top: 350px;
+  display: inline-block;
 }
 
 #guest-review-img {
   height: 250px;
   width: 250px;
-  position: absolute;
   border-radius: 50%;
-  margin: 60px 10px 0 0;
+  margin: 60px 0 0 100px;
   z-index: 1;
-  -webkit-shape-outside:circle();
-  shape-outside:circle();
+  position: absolute;
+  display: inline-block;
+
 }
 
 div.white-back {
@@ -85,11 +100,26 @@ div.white-back {
   }
   padding: 50px 0;
   background-color: rgba(255, 255, 255, 0.6);
-  margin: 100px auto;
+  margin: 100px auto 0 auto;
   height: 800px;
   width: 60%;
   box-sizing: border-box;
   z-index: 100;
+}
+
+div.leftSide, div.rightSide {
+  width: 10%;
+  display: inline-block;
+  margin-top: 350px;
+}
+
+div.middleSide {
+  width: 80%;
+  display: inline-block;
+}
+
+div.rightSide {
+
 }
 
 .pageview {
@@ -106,22 +136,18 @@ span.ion-chevron-right, span.ion-chevron-left {
   background-color: rgba(255, 255, 255, 0.6);
   z-index: 200;
   font-size: 32px;
-  // text-align: center;
   font-weight: bold;
   color: blue;
   :active {
     color: white;
   }
-  margin: 0px 0 0 0;
+  // margin: 300px 0 0 0;
   // padding: 0 100px;
-  display: block;
-  float:right;
-  vertical-align: middle;
-  position: absolute;
+
 }
 
 span.ion-chevron-right {
-  margin-top: -400px;
+  float: right;
 }
 
 .footer {

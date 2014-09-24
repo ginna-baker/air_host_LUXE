@@ -8,6 +8,7 @@ angular.module('airhostluxeApp')
 
     $http.get('/api/listing').success(function(listings) {
       $scope.listings = listings;
+      console.log($scope.listings);
     });
 
     $scope.deleteListing = function() {
@@ -82,13 +83,5 @@ angular.module('airhostluxeApp')
       });
     $location.path('home');
     };
-
-  $scope.generateUrlName = function() {
-    if (typeof $scope.listing.propoerty_name !== "undefined" && $scope.listing.propoerty_name !== "") {
-      return $scope.listing.propoerty_name.replace(/[\s]/ig,"_").replace(/[^\w]/ig,"");
-    } else {
-      return Math.random().toString(36).substring(2,7);
-    }
-  };
 
   });

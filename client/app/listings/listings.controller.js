@@ -1,8 +1,9 @@
 'use strict';
 
 angular.module('airhostluxeApp')
-  .controller('ListingsCtrl', function ($scope, $location, $http, Auth, User) {
+  .controller('ListingsCtrl', function ($scope, $location, $http, Auth) {
 
+    console.log("working");
     $scope.isLoggedIn = Auth.isLoggedIn;
     $scope.user = Auth.getCurrentUser();
 

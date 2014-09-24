@@ -9,9 +9,6 @@ angular.module('airhostluxeApp')
       'title': 'Why Luxe?',
       'link': '/why_luxe'
       },
-      {'title': 'Listings',
-      'link': $scope.user.name + '/listings'
-      },
       {'title': 'Get Started',
       'link': $scope.user.name + '/new'
       }

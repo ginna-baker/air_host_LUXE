@@ -8,49 +8,24 @@ angular.module('airhostluxeApp', [
   'ui.bootstrap',
   'flow'
 ])
-  .config(function ($routeProvider, $locationProvider, $httpProvider, flowFactoryProvider) {
+  .config(function ($routeProvider, $locationProvider, $httpProvider) {
     $routeProvider
       .when('/why_luxe', {
         templateUrl: '/app/why_luxe.html',
         controller: 'MainCtrl'
       })
-      .when('/:user/listings', {
-        templateURL: '/app/listings/listings.html',
-        controller: 'ListingsCtrl',
-        authenticate: true
-      })
       .when('/:user/new/', {
         templateUrl: '/app/customize/customize.html',
         controller: 'CustomizeCtrl'
       })
+      .when('/:user/frontlistings', {
+        templateUrl: '/app/frontlistings/frontlistings.html',
+        controller: 'FrontlistingsCtrl'
+      })
       .when('/:user/:listing/view', {
-        templateUrl: '/app/assets/oceanica/html/index.html',
+        templateUrl: '/assets/oceanica/html/index.html',
         controller: 'MainCtrl'
       })
-      // .when('/:user/:listing/my_stay', {
-      //   templateUrl: 'app/my_stay.html',
-      //   controller: 'MainCtrl'
-      // })
-      // .when('/:user/:listing/what_to_do', {
-      //   templateUrl: 'app/what_to_do.html',
-      //   controller: 'MainCtrl'
-      // })
-      // .when('/:user/:listing/where_to_eat', {
-      //   templateUrl: 'app/where_to_eat.html',
-      //   controller: 'MainCtrl'
-      // })
-      // .when('/:user/:listing/emergency', {
-      //   templateUrl: 'app/emergency.html',
-      //   controller: 'MainCtrl'
-      // })
-      // .when('/:user/:listing/xpage1', {
-      //   templateUrl: 'app/extra_page_1.html',
-      //   controller: 'MainCtrl'
-      // })
-      // .when('/:user/:listing/xpage2', {
-      //   templateUrl: 'app/extra_page_2.html',
-      //   controller: 'MainCtrl'
-      // })
       .when('/', {
         templateUrl: '/app/main/main.html',
         controller: 'MainCtrl'
@@ -61,10 +36,6 @@ angular.module('airhostluxeApp', [
 
     $locationProvider.html5Mode(true);
     $httpProvider.interceptors.push('authInterceptor');
-    flowFactoryProvider.defaults = {
-        target: '/:user/:listing/photos',
-        permanentErrors:[404, 500, 501]
-    };
   })
 
   .factory('authInterceptor', function ($rootScope, $q, $cookieStore, $location) {

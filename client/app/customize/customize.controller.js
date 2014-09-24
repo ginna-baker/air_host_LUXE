@@ -20,7 +20,7 @@ angular.module('airhostluxeApp')
     var body = {url: "https://www.airbnb.com/rooms/1747206?s=tBpK"};
 
     $scope.scrape = function() {
-      console.log("got it");
+      console.log("scraping");
       $scope.advance();
       $http.post('/api/scrape', body).success(function(data) {
         var scraped = data;
@@ -47,7 +47,7 @@ angular.module('airhostluxeApp')
       $http.post('/api/listing', {
         'date': new Date(),
         'user': {
-          'user_id': $scope.user._id,
+          '_id': $scope.user._id,
           'profile_photo': $scope.user.profile_photo
         },
         'postObj': postObj,

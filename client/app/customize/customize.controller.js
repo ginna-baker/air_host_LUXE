@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('airhostluxeApp')
-  .controller('CustomizeCtrl', function ($scope, $http, Auth, User, $location) {
+  .controller('CustomizeCtrl', function ($scope, $http, Auth, User, $location, $timeout) {
 
     $scope.isLoggedIn = Auth.isLoggedIn;
 
@@ -108,4 +108,16 @@ angular.module('airhostluxeApp')
       $scope.recycleFood();
       $scope.step++;
     };
+
+    $scope.countdown = function(num) {
+      $scope.timer.enable = true;
+      $scope.timer.t = num;
+      $scope.timer.t--;
+      $timeout($scope.countdown, 1000);
+      $step++;
+    }
+
+    if ($scope.step===2) {
+      $scope.countdown(10);
+    }
   });

@@ -37,8 +37,13 @@ angular.module('airhostluxeApp')
         return;
       };
       postObj.property_info = $scope.listing.property_info;
+      $scope.listing.property_info.house_rules = "Please remove your shoes before walking on the carpets."
       $scope.listing.property_info.luxe_url = $scope.generateUrlCode();
       postObj.your_stay = $scope.listing.your_stay;
+      $scope.listing.your_stay.safety = "The United States requires bicyclists to wear helmets at all times."
+      $scope.listing.your_stay.culture = "Tipping is expected for services here, as employees are not well paid.  Give a %15-20% tip for waitstaff, taxi drivers, haircuts, food delivery, and other services."
+      $scope.listing.your_stay.phone = "The local area code is (917)."
+      $scope.listing.your_stay.laws = "Alcohol consumption is limited to persons age 21 or over -- you may be asked for photo ID when purchasing."
       postObj.emergency = $scope.listing.emergency;
       $scope.listing.emergency.call_number = "911";
       $scope.listing.emergency.poison_ctrl_center ="1-800-222-1222";
@@ -85,7 +90,7 @@ angular.module('airhostluxeApp')
 
     $scope.recycleFood = function() {
       postObj.where_to_eat.push({
-        place: $scope.listing.where_to_eat.restaurant,
+        restaurant: $scope.listing.where_to_eat.restaurant,
         url: $scope.listing.where_to_eat.url,
         note: $scope.listing.where_to_eat.note
       });

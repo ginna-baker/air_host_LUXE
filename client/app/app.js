@@ -6,7 +6,6 @@ angular.module('airhostluxeApp', [
   'ngSanitize',
   'ngRoute',
   'ui.bootstrap',
-  'flow'
 ])
   .config(function ($routeProvider, $locationProvider, $httpProvider) {
     $routeProvider
@@ -22,9 +21,9 @@ angular.module('airhostluxeApp', [
         templateUrl: '/app/frontlistings/frontlistings.html',
         controller: 'FrontlistingsCtrl'
       })
-      .when('/:user/:listing/view', {
+      .when('/view/:listing', {
         templateUrl: '/assets/oceanica/html/index.html',
-        controller: 'MainCtrl'
+        controller: 'UserviewsCtrl'
       })
       .when('/', {
         templateUrl: '/app/main/main.html',

@@ -22,7 +22,7 @@ angular.module('airhostluxeApp', [
         controller: 'FrontlistingsCtrl'
       })
       .when('/view/:listing', {
-        templateUrl: '/assets/oceanica/html/index.html',
+        templateUrl: '/app/userviews/oceanica/html/index.html',
         controller: 'UserviewsCtrl'
       })
       .when('/', {

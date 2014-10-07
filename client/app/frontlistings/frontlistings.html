@@ -1,0 +1,21 @@
+<div ng-include="'components/navbar/navbar.html'"></div>
+
+<img src="assets/images/ocean.jpg" id="ocean">
+
+<div class="col-md-12">
+  <div class="myListings">
+    <ul class="list-group" ng-model="listings" ng-repeat="listing in listings" ng-hide="deleted">
+<!--       <li class="list-group-item-active"><h3>Property Name</h3></li> -->
+      <li class="my-listings"><h3>{{listing.postObj.property_info.name}}</h3>
+        <div class="right-align">
+          <a href="view/{{listing._id}}" class="btn btn-info centered" data-inline="true">VIEW</a>
+          <button class="btn btn-success" ng-click="editSite(id)" data-inline="true">EDIT</button>
+          <button class="btn btn-warning share" ng-click="" data-inline="true">SEND WELCOME EMAIL</button>
+          <button class="btn btn-warning share" ng-click="" data-inline="true">REQUEST FEEDBACK</button>
+          <button type="button" class="btn btn-danger" ng-click="deleteListing(listing)" data-inline="true">-</button>
+        </div>
+      </li>
+      <br></br>
+    </ul>
+  </div>
+</div>
